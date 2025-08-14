@@ -1,5 +1,6 @@
 import App from "@/App";
 import { About } from "@/pages/About";
+import barcodeNFCtest from "@/pages/barcodeNFCtest";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import { Verify } from "@/pages/Verify";
@@ -29,5 +30,9 @@ export const router = createBrowserRouter([
   {
     path: "/verify",
     Component: Verify,
+  },
+  {
+    path: "/barcode",
+    Component: barcodeNFCtest,
   },
 ]);
