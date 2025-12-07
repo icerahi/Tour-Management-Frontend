@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# 🌍 Tour Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive Single Page Application (SPA) built with **React**, **TypeScript**, and **Vite**. This frontend connects to the backend API to allow users to book tours, manage their profiles, and provides an admin interface for managing tour packages.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React.js
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **State Management:** Redux Toolkit / RTK Query
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **Forms:** React Hook Form
+- **UI Components:** Ant Design / Shadcn UI (Assumed)
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dynamic Tour Browsing:** View available tours with filtering and search capabilities.
+- **User Authentication:** Login and Registration pages with JWT integration.
+- **Booking Interface:** Seamless booking process for users.
+- **Dashboard:**
+  - **User Dashboard:** View booking history and profile settings.
+  - **Admin Dashboard:** Manage users, create/edit tours, and view analytics.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+├── assets/          # Static assets (images, icons)
+├── components/      # Reusable UI components
+├── layout/          # Main layouts (MainLayout, DashboardLayout)
+├── pages/           # Page components (Home, TourDetails, Login)
+├── redux/           # Redux slices and API services (RTK Query)
+├── router/          # Route definitions
+├── types/           # Global TypeScript interfaces
+└── utils/           # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Follow these steps to set up the project locally.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1\. Clone the Repository
+
+```bash
+git clone https://github.com/icerahi/Tour-Management-Frontend.git
+cd Tour-Management-Frontend
+```
+
+### 2\. Install Dependencies
+
+You can use `npm` or `bun` (detected `bun.lock` in repo).
+
+```bash
+npm install
+# or
+bun install
+```
+
+### 3\. Set Up Environment Variables
+
+Create a `.env` file in the root directory and add your backend API URL:
+
+```env
+VITE_API_URL=http://localhost:5000/api/v1
+```
+
+### 4\. Run the Application
+
+**Development Mode:**
+
+```bash
+npm run dev
+# or
+bun dev
+```
+
+The app will typically run at `http://localhost:5173`.
+
+**Build for Production:**
+
+```bash
+npm run build
+# or
+bun run build
+```
+
+## 🔌 API Integration
+
+This frontend is designed to consume the **Tour Management Backend**. Ensure the backend server is running locally or provide the live server URL in the `.env` file.
+
+## 🤝 Contributing
+
+Contributions are welcome\!
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/cool-feature`).
+3.  Commit your changes (`git commit -m 'Added cool feature'`).
+4.  Push to the branch (`git push origin feature/cool-feature`).
+5.  Open a Pull Request.
+
+
+-----
+
+**Developed by [Imran Hasan](https://github.com/icerahi)**
+
+```
 ```
